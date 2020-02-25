@@ -1,0 +1,36 @@
+.results-toggles {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    .list{
+        border-radius: 0 5px 5px 0;
+    }
+    .tile {
+        border-radius: 5px 0 0 5px;
+    }
+    .list, .tile {
+        cursor: pointer;
+        background-color: #505050;
+        color: white;
+        padding: 5px;
+        border: 0;
+        width: 42px;
+        transition: 0.3s ease-in-out;
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+        &.active {
+            cursor: default;
+            background-color: white;
+            color: #505050;
+            box-shadow: 0 2px 6px 0 #000000bf;
+            &:hover {
+                background-color: white;
+            }
+        }
+        &:hover {
+            background-color: #555555;
+        }
+    }
+}

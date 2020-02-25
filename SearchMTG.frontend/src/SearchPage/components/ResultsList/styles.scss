@@ -1,0 +1,108 @@
+.results-container {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0 130px 0 0;
+    padding: 0 30px 0 160px;
+    .list-item {
+        display: flex;
+        background-color: white;
+        cursor: pointer;
+        opacity: .87;
+        border-radius: 5px;
+        margin: 28px 0px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px 0 #000000bf;
+        transition: 250ms ease-in-out;
+        &:hover{
+            box-shadow: 0 8px 16px 0 #000000bf;
+            opacity: 1;
+        }
+        .image-crop {
+            flex: none;
+            max-width: 130px;
+            max-height: 130px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 17px;
+            transition: 0.5s ease-in-out;
+            img {
+                height: 300px;
+                margin: -38px 0 0 -40px;
+                transition: margin 0.5s ease-in-out;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 12px 12px 12px 0;
+            color: #525252;
+            .title {
+                font-size: 18px;
+                color: #525252;
+            }
+            .line-break {
+                width: 100%;
+            }
+            .sub {
+                padding-bottom: 5px;
+                font-style: italic;
+                font-size: 14px;     
+                .set {
+                    height: 14px;
+                    float: right;
+                }
+            }
+            .description {
+                flex: 1;
+                white-space: pre-line;
+                .symbol {
+                    height: 16px;
+                    margin-bottom: -3px;
+                }
+            }
+            .flavor {
+                flex: 1;
+                max-height: 0;
+                overflow-y: hidden;
+                white-space: pre-line;
+                font-style: italic;
+                transition: max-height 0.5s ease-in-out;
+                transition-delay: 0s;
+            }
+            .footer {
+                display: flex;
+                .artist {
+                    font-size: 14px;
+                    font-style: italic;
+                    margin-top: 4px;
+                }
+                .strength {
+                    flex: 1;
+                    font-size: 18px;
+                    text-align: right;
+                }
+            }
+            .mana-cost {
+                height: 16px;
+                float: right;
+                margin-right: 2px;
+            }
+        }
+        // After the item is clicked
+        &.selected {
+            .image-crop {
+                border-radius: 10px;
+                max-width: 500px;
+                max-height: 500px;
+                img {
+                    margin: 0;
+                }
+            }
+            .flavor {
+                max-height: 500px;
+                transition-delay: 0.8s;
+            }
+        }
+    }
+}
